@@ -1,0 +1,101 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.cisco.vcse.automation.utils</groupId>
+	<artifactId>core-SSH</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0.0.0</version>
+	<name>core-SSH</name>
+	<description>Core library for SSH calls</description>
+
+	<scm>
+		<connection>scm:git:git@lwr-dbds-gitlab1.cisco.com:dbdsautomation/core-ssh.git</connection>
+		<developerConnection>scm:git:git@lwr-dbds-gitlab1.cisco.com:dbdsautomation/core-ssh.git</developerConnection>
+		<tag>HEAD</tag>
+
+	</scm>
+
+	<build>
+
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<goals>clean deploy</goals>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.10.3</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.ethz.ganymed</groupId>
+			<artifactId>ganymed-ssh2</artifactId>
+			<version>262</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<version>3.3</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.cisco.vcse.automation.utils</groupId>
+			<artifactId>core-Utils</artifactId>
+			<version>1.0.0.0</version>
+		</dependency>
+
+	</dependencies>
+
+	<distributionManagement>
+
+		<snapshotRepository>
+			<id>10.78.216.186</id>
+			<name>SIT-local</name>
+			<url>http://10.78.216.186:8081/artifactory/SIT-local</url>
+		</snapshotRepository>
+		<repository>
+			<id>10.78.216.186</id>
+			<name>Automation</name>
+			<url>http://10.78.216.186:8081/artifactory/Automation</url>
+		</repository>
+
+
+
+	</distributionManagement>
+
+
+</project>
