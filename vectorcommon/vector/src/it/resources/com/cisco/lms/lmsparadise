@@ -1,0 +1,84 @@
+#================================================================================ 
+# Section 1: Report mail related config variables 
+#-------------------------------------------------------------------------------- 
+# All of the email ids to whom the automation report email needs to be sent
+# is to be mentioned here.
+# All of email id's are separeted by a comma.
+#only one mail smtp host name or ip
+#-------------------------------------------------------------------------------- 
+MAIL.TO = anganesa@cisco.com
+MAIL.SMTP.HOST=outbound.cisco.com
+
+MAIL.FROM =automationreportmailer@cisco.com
+MAIL.FROM.PERSONAL=Automation Report Mailer
+MAIL.SUBJECT=Vector 8.0 Stage 2 Automation report
+
+
+#================================================================================ 
+# Section 2: PK_PSM config variables 
+#-------------------------------------------------------------------------------- 
+LMS.PK_PSM.IP 			= 10.78.206.142
+LMS.PK_PSM.PORT      = 8443
+LMS.PK_PSM.ORACLE.IP = 10.78.206.221
+LMS.PK_PSM.ORACLE.PORT = 1522
+LMS.PK_PSM.ORACLE.SID = wcs
+LMS.PK_PSM.ORACLE.USERID =CA_PCB
+LMS.PK_PSM.ORACLE.PASSWORD =CA_PCB
+#================================================================================ 
+# Section 3: Service Manager config variables 
+#--------------------------------------------------------------------------------
+LMS.SERVICEMANAGER.IP	= 10.78.206.143
+LMS.SERVICEMANAGER.PORT=8443
+LMS.SERVICEMANAGER.ORACLE.USERID =ECSAPP
+LMS.SERVICEMANAGER.ORACLE.PASSWORD =ECSAPP
+LMS.SERVICEMANAGER.ORACLE.PORT = 1522
+LMS.SERVICEMANAGER.ORACLE.SID = wcs
+#================================================================================ 
+# Section 4: VCS console config variables 
+#--------------------------------------------------------------------------------
+LMS.VCSCONSOLE.IP		= 10.78.206.103
+LMS.VCSCONSOLE.PORT= 6605
+#================================================================================ 
+# Section 5: ESN config variables 
+#--------------------------------------------------------------------------------
+LMS.ESN.IP				= 10.78.203.118
+LMS.ESN.CONTROLLERID    = taj
+LMS.ESN.INFORMIX.PORT= 9088
+LMS.ESN.SSH.USER = root
+LMS.ESN.SSH.PWD = generic@123
+
+
+#================================================================================ 
+# Section 6: ECS config variables 
+#--------------------------------------------------------------------------------
+LMS.ECS.IP				= 10.78.216.181
+
+
+#================================================================================ 
+# Section 7: DTACS config variables 
+#--------------------------------------------------------------------------------
+LMS.DTACS.IP			= 10.78.203.133
+LMS.DTACS.INFORMIX.PORT = 3010
+LMS.DTACS.SSH.USER = root
+LMS.DTACS.SSH.PWD = generic@123
+
+#================================================================================ 
+# Section 8: SD config variables 
+#--------------------------------------------------------------------------------
+LMS.SD.IP			= 10.78.206.221
+
+#================================================================================ 
+# Section 9:AC Manager Config variables 
+#--------------------------------------------------------------------------------
+LMS.ACMANAGER.IP			= 10.78.206.140
+LMS.ACMANAGER.DB.USERNAME = mongoUser
+LMS.ACMANAGER.DB.PASSWORD = mongoUser
+LMS.ACMANAGER.PORT = 27017
+
+
+
+
+
+
+
+
