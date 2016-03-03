@@ -1,24 +1,24 @@
 /**
- * Copyright (c) $2015 by Cisco Systems, Inc.
+ * Copyright (c) $2015 by sat, Inc.
  * All rights reserved.
  *
  * This software is the confidential and proprietary information
- * of Cisco Systems,  ("Confidential Information").  You
+ * of sat,  ("Confidential Information").  You
  * shall not disclose such Confidential Information and shall use
  * it only in accordance with the terms of the license agreement
- * you entered into with Cisco Systems.
+ * you entered into with sat.
  * 
  * The HttpClient allows uniform access to any HTTP or HTTPS Service.  
  * The configuration for the service can be specified via HttpClientBuilder or HttpClientBuilder
  *
  * @Project: core-HTTP
- * @Author: kosk
+ * @Author: amsathishkumar
  * @Version: 1.0.0.0
  * @Description:  An HttpClient for Integration Test that allows uniform access to any HTTP Service.
  * @Date updated: 6/3/2015
  */
 
-package com.cisco.vcse.automation.utils.http;
+package com.sat.vcse.automation.utils.http;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -74,11 +74,11 @@ import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 
-import com.cisco.vcse.automation.utils.datatype.CoreResponse;
 import com.cisco.vcse.automation.utils.datatype.CoreRuntimeException;
-import com.cisco.vcse.automation.utils.datatype.NoOpTrustManager;
-import com.cisco.vcse.automation.utils.helpers.HttpResponseMapper;
 import com.cisco.vcse.automation.utils.logging.LogHandler;
+import com.sat.vcse.automation.utils.datatype.CoreResponse;
+import com.sat.vcse.automation.utils.datatype.NoOpTrustManager;
+import com.sat.vcse.automation.utils.helpers.HttpResponseMapper;
 
 public class HttpClient {
 
@@ -191,7 +191,7 @@ public class HttpClient {
 	/**
 	 * Builder to work with http calls;
 	 * To work on https please use HttpsClientBuilder
-	 * @author kosk
+	 * @author amsathishkumar
 	 *
 	 */
 	public static class HttpClientBuilder {
@@ -251,7 +251,7 @@ public class HttpClient {
 	/**
 	 * Builder to work with https calls
 	 * To work on http please use HttpClientBuilder
-	 * @author kosk
+	 * @author amsathishkumar
 	 *
 	 */
 	public static class HttpsClientBuilder extends HttpClientBuilder {

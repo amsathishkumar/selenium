@@ -1,23 +1,4 @@
-/**
- * Copyright (c) $2015 by Cisco Systems, Inc.
- * All rights reserved.
- *
- * This software is the confidential and proprietary information
- * of Cisco Systems,  ("Confidential Information").  You
- * shall not disclose such Confidential Information and shall use
- * it only in accordance with the terms of the license agreement
- * you entered into with Cisco Systems.
- * 
- * JSONUtil provides a set of functions to add/update/edit/delete node/values in JSON.
- *
- *
- * @Project: core-HTTP
- * @Author: kosk
- * @Version: 1.0.0.0
- * @Description:  Utility providing basic operation on JSON.
- * @Date updated: 6/17/2015
- */
-package com.cisco.vcse.automation.utils.helpers;
+package com.sat.vcse.automation.utils.helpers;
 
 
 import java.util.ArrayList;
