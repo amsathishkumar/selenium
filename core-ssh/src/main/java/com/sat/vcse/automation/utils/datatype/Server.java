@@ -1,4 +1,4 @@
-package com.cisco.vcse.automation.utils.datatype;
+package com.sat.vcse.automation.utils.datatype;
 
 public class Server {
 	

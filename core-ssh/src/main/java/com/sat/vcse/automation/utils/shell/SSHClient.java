@@ -16,7 +16,7 @@
  * @Date 6/10-2015
  */
 
-package com.cisco.vcse.automation.utils.shell;
+package com.sat.vcse.automation.utils.shell;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
@@ -35,10 +35,10 @@ import org.apache.commons.io.FileUtils;
 
 import com.cisco.vcse.automation.utils.Autowait;
 import com.cisco.vcse.automation.utils.CommonUtils;
-import com.cisco.vcse.automation.utils.datatype.CommandResponse;
 import com.cisco.vcse.automation.utils.datatype.CoreRuntimeException;
-import com.cisco.vcse.automation.utils.datatype.Server;
 import com.cisco.vcse.automation.utils.logging.LogHandler;
+import com.sat.vcse.automation.utils.datatype.CommandResponse;
+import com.sat.vcse.automation.utils.datatype.Server;
 
 import ch.ethz.ssh2.ChannelCondition;
 import ch.ethz.ssh2.Connection;

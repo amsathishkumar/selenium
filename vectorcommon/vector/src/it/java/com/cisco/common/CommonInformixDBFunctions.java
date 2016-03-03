@@ -21,13 +21,13 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.cisco.vcse.automation.utils.shell.SSHClient;
 import com.sat.spvgt.utils.nosqldb.NosqlManager;
 import com.sat.spvgt.utils.nosqldb.NosqlType;
 import com.sat.spvgt.utils.validation.Validate;
 import com.sat.vcse.automation.utils.datatype.DBQueryResult;
 import com.sat.vcse.automation.utils.datatype.DatabaseType;
 import com.sat.vcse.automation.utils.db.DBClient;
+import com.sat.vcse.automation.utils.shell.SSHClient;
 
 import junit.framework.Assert;
 

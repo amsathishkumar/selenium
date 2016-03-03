@@ -1,4 +1,4 @@
-package com.cisco.vcse.automation.utils.ftp;
+package com.sat.vcse.automation.utils.ftp;
 
 
 import java.io.ByteArrayInputStream;
@@ -13,7 +13,7 @@ import java.io.OutputStream;
 import org.apache.commons.net.ftp.FTPReply;
 
 import com.cisco.vcse.automation.utils.datatype.CoreRuntimeException;
-import com.cisco.vcse.automation.utils.datatype.Server;
+import com.sat.vcse.automation.utils.datatype.Server;
 
 public class FTPClient extends Server {
 
