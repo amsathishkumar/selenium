@@ -18,7 +18,7 @@
  * @Date updated: 6/3/2015
  */
 
-package com.cisco.vcse.automation.utils.datatype;
+package com.sat.vcse.automation.utils.datatype;
 
 public class CoreRuntimeException extends RuntimeException {
 

@@ -18,7 +18,7 @@
 /*
  * Class that defines the Format of the Log being logged in File
  */
-package com.cisco.vcse.automation.utils.logging;
+package com.sat.vcse.automation.utils.logging;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

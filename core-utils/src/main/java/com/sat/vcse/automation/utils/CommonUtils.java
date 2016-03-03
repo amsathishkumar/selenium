@@ -16,9 +16,9 @@
  * @Date created: Apr 9, 2015
  */
 
-package com.cisco.vcse.automation.utils;
+package com.sat.vcse.automation.utils;
 
-import com.cisco.vcse.automation.utils.logging.LogHandler;
+import com.sat.vcse.automation.utils.logging.LogHandler;
 
 // TODO: Auto-generated Javadoc
 /**

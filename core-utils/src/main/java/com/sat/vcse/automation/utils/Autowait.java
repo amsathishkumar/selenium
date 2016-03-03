@@ -15,7 +15,7 @@
  * @Description:  
  * @Date created: Apr 9, 2015
  */
-package com.cisco.vcse.automation.utils;
+package com.sat.vcse.automation.utils;
 
 // TODO: Auto-generated Javadoc
 /**

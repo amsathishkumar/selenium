@@ -16,7 +16,7 @@
  * @Description:  
  * @Date created: Apr 9, 2015
  */
-package com.cisco.vcse.automation.utils.logging;
+package com.sat.vcse.automation.utils.logging;
 
 import java.io.File;
 import java.io.FileOutputStream;
