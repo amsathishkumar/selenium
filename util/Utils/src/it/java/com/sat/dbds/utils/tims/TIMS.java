@@ -133,7 +133,7 @@ public class TIMS {
 			credentials.put("brwversion", browserversion);
 			if (userID == null || userID == "") {
 				status = false;				System.out.println("UserID shouldn't be null or blank.");				return status;			}
-			if (token == null || token == "") {				status = false;				System.out				.println("Automation Token shouldn't be null or blank.");				return status;			}
+			if (token == null || token == "") {				status = false;				System.out				.println("Automation Token shouldn't be null or blank.");				return status;			}
 			if (projectID == null || projectID == "") {
 				status = false;
 				System.out.println("ProjectID shouldn't be null or blank.");

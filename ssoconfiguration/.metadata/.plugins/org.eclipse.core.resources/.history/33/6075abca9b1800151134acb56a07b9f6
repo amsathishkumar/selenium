@@ -1,0 +1,231 @@
+@Login
+Feature: Single Sign On WUI 
+
+@TtvLogin1 @LoginRALLY1 @Login @Sanity @LoginSanity @NON-TIMS-Completed
+Scenario: VCS login 
+	Given Navigate to VCS "<<vcs.url>>" 
+	And Enter user name "<<vcs.login.username>>" 
+	And Enter password "<<vcs.login.password>>" 
+	And Click on "login" button
+
+
+@Ttv10159888c @LoginRALLY! @VCSLoginWUI  @Sanity @Completed-anusha-login
+Scenario: VCS Login WUI : VCS console Login button operation with valid user name and password
+  Given Navigate to VCS "<<vcs.url>>"
+  And Enter user name "<<vcs.login.username>>"
+  And Enter password "<<vcs.login.password>>"
+  And Click on "login" button
+  And Click Settings button
+  And Validate VCS Settings Dropdown Values-Log Out
+  And Validate VCS Settings Dropdown Value-Help
+  And Validate VCS Settings Dropdown-Help-Content
+  Given Validate VCS_Settings_Dropdown_Logged_in as "<<vcs.login.username>>"
+#  And Excute the Database query "select USERNAME,USERGROUP,AUTHENTICATOR,OPERATION,OPERATIONTYPE from AUDITLOG where IPADDRESS = '10.143.32.180'"
+  And Excute the Database query "select distinct USERNAME from AUDITLOG where IPADDRESS = '10.143.32.180' AND USERNAME = '<USERNAME>'"
+
+
+
+@Ttv10159891c @LoginRALLY! @VCSLoginWUI  @Sanity @Completed-anusha-login
+Scenario: VCS Login WUI : VCS console user logout operation
+  Given Navigate to VCS "<<vcs.url>>"
+  And Enter user name "<<vcs.login.username>>"
+  And Enter password "<<vcs.login.password>>"
+  And Click on "login" button
+  And Validate the Home Screen Header
+  And Validate the Logged in user name
+
+  And Click Settings button
+  And Click on Log-out
+  And Validate Log-out Screen Message "You have been successfully logged out."
+  And Validate Home Page is displayed.
+
+@Ttv10159892c @LoginRALLY! @VCSLoginWUI  @Sanity @Completed-anusha-login
+Scenario: VCS Login WUI : Login with default user name and password
+  Given Navigate to VCS "<<vcs.url>>"
+  And Enter user name "<<vcs.login.username>>"
+  And Enter password "<<vcs.login.password>>"
+  And Click on "login" button
+  And Validate the Home Screen Header
+  And Validate the Logged in user name
+  And Click Settings button
+  And Click on Log-out
+  And Enter user name "<<vcs.login.username>>"
+  And Enter password "<<vcs.login.password>>"
+  And Click on "login" button
+  And Validate the Home Screen Header
+  And Validate the Logged in user name
+
+
+@Ttv10166546c @LoginRALLY! @VCSLoginWUI  @Sanity @Completed-anusha-login
+Scenario: VCS Login WUI : VCS console home page details
+
+  Given Navigate to VCS "<<vcs.url>>"
+  And Enter user name "<<vcs.login.username>>"
+  And Enter password "<<vcs.login.password>>"
+  And Click on "login" button
+  And Validate the Home Screen Header
+  And Validate the Page Title as " Welcome to Videoscape Control Suite."
+
+
+
+@Ttv10159886c @LoginRALLY! @VCSLoginWUI @Regression @Completed-anusha-login
+ Scenario: VCS Login WUI : VCS console Login button status
+    Given Navigate to VCS "<<vcs.url>>"
+    And Enter user name "<<vcs.login.username>>"
+    And Enter password "<<vcs.login.password>>"
+
+    And Verify Button Status
+      |  Widget     | Status  |
+      |Log In Button | Enabled |
+
+    And Clear the Username/Password text box "User Name"
+    And Clear the Username/Password text box "Password"
+    And Verify Button Status
+      |  Widget     | Status  |
+      |Log In Button  | Disabled |
+
+    And Validate the mask of "Username" Field
+    And Validate the mask of "Passowrd" Field
+
+
+@Ttv10159889c @LoginRALLY! @VCSLoginWUI @Regression @Completed-anusha-login
+Scenario: VCS Login WUI : VCS console Login button operation with valid user name and invalid password
+    Given Navigate to VCS "<<vcs.url>>"
+    And Enter user name "AutoUser_ANUSHA"
+    And Enter password "Admin"
+    And Click on "login" button
+    And WUI wait for "2" seconds
+    And Verify Login "Error" Message  "Invalid Username or Password. Please try again. More than three consequent wrong attempts will lock the user account."
+    And WUI wait for "2" seconds
+    And Enter password "Admin"
+    And Click on "login" button
+
+    And WUI wait for "2" seconds
+    And Enter password "Admin"
+    And Click on "login" button
+    And WUI wait for "2" seconds
+
+    And Verify Login "Locked" Message  "User is locked due to three consequent wrong attempts. Please try back again in 10 minutes or contact system administrator"
+
+  @Ttv10159890c @LoginRALLY! @VCSLoginWUI @Regression @anusha-wait-issue
+    Scenario: VCS Login WUI : VCS console Login button operation with invalid user name and invalid password
+    Given Navigate to VCS "<<vcs.url>>"
+    And Enter user name "%^&*ABCDEFGHIJKLMNOPQRSTUVWXYZ%^&*ABCDEFGHIJKLMNOPQRSTUVWXYZ%^&*ABCDEFGHIJKLMNOPQRSTUVWXYZ%^&*ABCDEFGHIJKLMNOPQRSTUVWXYZ%^&*ABCDEFGHIJKLMNOPQRSTUVWXYZ%^&*ABCDEFGHIJKLMNOPQRSTUVWXYZ%^&*ABCDEFGHIJKLMNOPQRSTUVWXYZ%^&*ABCDEFGHIJKLMNOPQRSTUVWXYZ%^&*ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    And Enter password "!@@@Admin"
+    And Click on "login" button
+    And WUI wait for "2" seconds
+    And Verify Login "Error" Message  "Invalid Username or Password. Please try again. More than three consequent wrong attempts will lock the user account."
+
+
+  @Ttv10166548c @LoginRALLY! @VCSLoginWUI @Regression @Completed-anusha-login
+    Scenario: VCS Login WUI : VCS console home page Bread Crumb
+    Given Navigate to VCS "<<vcs.url>>"
+    And Enter user name "<<vcs.login.username>>"
+    And Enter password "<<vcs.login.password>>"
+    And Click on "login" button
+    Then I assert if the breadcrumb displayed is "Home icon" by comparing the image "homeicon_original.png"
+    Then I verify the "Separator icon " by comparing the image "separatoricon_original.png"
+    Then I verify the "Home" text
+    Then I verify the "favourite icon" by star icon "favouriteicon_original.png"
+
+    @Ttv10166549c  @LoginRALLY! @VCSLoginWUI @Regression @Completed-anusha-login
+    Scenario: VCS Login WUI : VCS console Breadcrumb favorite icon operation
+      Given Navigate to VCS "<<vcs.url>>"
+      And Enter user name "<<vcs.login.username>>"
+      And Enter password "<<vcs.login.password>>"
+      And Click on "login" button
+      Then I verify the "favourite icon" by star icon "favouriteicon_original.png"
+
+    @Ttv10166547c @LoginRALLY! @VCSLoginWUI @Regression @Completed-anusha-login
+    Scenario: VCS Login WUI : VCS console main menu
+      Given Navigate to VCS "<<vcs.url>>"
+      And Enter user name "<<vcs.login.username>>"
+      And Enter password "<<vcs.login.password>>"
+      And Click on "login" button
+      And Validate Home Page is displayed.
+      And I check "Cisco logo"
+
+      Then I verify the "Videoscape Control Suite Console" text
+
+    @Ttv10166546c @LoginRALLY! @VCSLoginWUI @Regression @Completed-anusha-login
+    Scenario: VCS Login WUI : VCS console home page details
+      Given Navigate to VCS "<<vcs.url>>"
+      And Enter user name "<<vcs.login.username>>"
+      And Enter password "<<vcs.login.password>>"
+      And Click on "login" button
+      Then I verify the "Videoscape Control Suite Console" text
+      Then I Verrify "Main Menu"
+
+
+      @Ttv10166556c @LoginRALLY! @VCSLoginWUI @Regression @Completed-anusha-login
+      Scenario: VCS Login WUI : VCS console global search on the main menu
+        Given Navigate to VCS "<<vcs.url>>"
+        And Enter user name "<<vcs.login.username>>"
+        And Enter password "<<vcs.login.password>>"
+        And Click on "login" button
+        Then I validate "global search" in main menu
+
+      @Ttv10166556c @LoginRALLY! @VCSLoginWUI @Regression @Completed-anusha-login
+      Scenario: VCS Login WUI : VCS console global search on the main menu
+        Given Navigate to VCS "<<vcs.url>>"
+        And Enter user name "<<vcs.login.username>>"
+        And Enter password "<<vcs.login.password>>"
+        And Click on "login" button
+        Given Click on the Toggle menu icon
+        And WUI wait for "2" seconds
+        
+      @Ttv10166552c @LoginRALLY! @VCSLoginWUI @Regression @Completed-anusha-login
+      Scenario: VCS Login WUI : VCS console Toggle menu Navigation option
+      Given Navigate to VCS "<<vcs.url>>"
+        And Enter user name "<<vcs.login.username>>"
+        And Enter password "<<vcs.login.password>>"
+        And Click on "login" button
+        
+      
+      
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

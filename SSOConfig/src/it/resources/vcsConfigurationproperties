@@ -1,0 +1,106 @@
+#vcs.url = https://10.78.217.148:6605/vcsconsole
+#oracle.db.ip=10.78.217.225
+#oracle.db.scid=wcs
+#oracle.db.username=xmpdba
+#oracle.db.password=xmpdba
+#vcs.ip = 10.78.217.148
+#vcs.login.username = root
+#vcs.login.password = Public123
+#vcs.delay.wuioffset = 100
+#vcs.port = 6605
+##########
+#vcs.url = https://10.78.217.168:6605/vcsconsole
+#oracle.db.ip = 10.78.217.229
+#oracle.db.scid = wcs
+#oracle.db.username = xmpdba
+#oracle.db.password=xmpdba
+#oracle.jdbc.driver.port = 1522
+#vcs.ip = 10.78.217.168
+#vcs.login.username = root
+#vcs.login.password = Public123
+#vcs.ssh.username = root
+#vcs.ssh.password = 2g3n3r!c
+#vcs.delay.wuioffset = 100
+#vcs.port = 6605
+#oracle.ssh.username = root
+#oracle.ssh.password = password
+#############
+#vcs.url = https://10.78.216.93:6605/vcsconsole
+#oracle.db.ip=10.78.217.193
+#oracle.db.scid=mysql
+#oracle.db.username=xmpdba
+#oracle.db.password=xmpdba
+#oracle.jdbc.driver.port = 1522
+#vcs.ip = 10.78.217.168
+#vcs.login.username = root
+#vcs.login.password = Public123
+#vcs.ssh.username = root
+#vcs.ssh.password = 2g3n3r!c
+#vcs.delay.wuioffset = 100
+#vcs.port = 6605
+#oracle.ssh.username = root
+#oracle.ssh.password = password
+#############
+#vcs.url = https://10.78.216.93:6605/vcsconsole
+#oracle.db.ip=10.78.217.94
+#oracle.db.scid=wcs
+#oracle.db.username=xmpdba
+#oracle.db.password=xmpdba
+#oracle.jdbc.driver.port = 1522
+#vcs.ip = 10.78.216.93
+#vcs.ssh.username = root
+#vcs.ssh.password = 2g3n3r!c
+#vcs.login.username = root
+#vcs.login.password = Public@123
+#vcs.delay.wuioffset = 100
+#vcs.port = 6605
+#oracle.ssh.username=root
+#oracle.ssh.password=2g3n3r!c
+#oracle.ssh.password=password
+#Dbtype = oracle
+#vcs.sd.ip = 10.78.217.94
+######################################
+
+vcs.url = https://10.78.206.164:6605/vcsconsole
+oracle.db.ip=10.78.206.165
+oracle.db.scid=wcs
+oracle.db.username=xmpdba
+oracle.db.password=xmpdba
+oracle.jdbc.driver.port = 1522
+vcs.ip = 10.78.206.164
+vcs.ssh.username = root
+vcs.ssh.password = generic@123
+vcs.login.username = root
+vcs.login.password = Public@123
+vcs.delay.wuioffset = 100
+vcs.port = 6605
+oracle.ssh.username=root
+oracle.ssh.password=password
+Dbtype = oracle
+vcs.sd.ip = 10.78.206.165
+
+server.env = notopenstack
+server.keyfile = cloud.key
+
+##########
+#vcs.url = https://10.78.217.168:6605/vcsconsole
+#oracle.db.ip = 10.78.217.229
+#oracle.db.scid = wcs
+#oracle.db.username = xmpdba
+#oracle.db.password=xmpdba
+#oracle.jdbc.driver.port = 3306
+#vcs.ip = 10.78.217.168
+#vcs.login.username = root
+#vcs.login.password = Public123
+#vcs.ssh.username = root
+#vcs.ssh.password = 2g3n3r!c
+#oracle.jdbc.driver.port = 1522
+#vcs.delay.wuioffset = 100
+#vcs.port = 6605
+#oracle.ssh.username = root
+#oracle.ssh.password = password
+#mailer-list = anganesa@cisco.com
+#vcs.sd.ip = 10.78.203.192
+#Dbtype = oracle
+#############
+
