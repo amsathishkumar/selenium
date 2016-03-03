@@ -1,16 +1,16 @@
 /**
- * Copyright (c) 2015 by Cisco Systems, Inc.
+ * Copyright (c) 2015 by sat, Inc.
  * All rights reserved.
  *
  * This software is the confidential and proprietary information
- * of Cisco Systems,  ("Confidential Information").  You
+ * of sat,  ("Confidential Information").  You
  * shall not disclose such Confidential Information and shall use
  * it only in accordance with the terms of the license agreement
- * you entered into with Cisco Systems.
+ * you entered into with sat.
  *
  *
  * @Project: Utils
- * @Author: smuniapp
+ * @Author: amsathishkumar
  * @Version: 
  * @Description:  
  * @Date created: Apr 9, 2015
@@ -148,7 +148,7 @@ public class SeleniumUtilities {
 						JarFile jarFile = jarfilehandler
 								.jarForClass(SeleniumUtilities.class);
 						// JarFile jarFile = new
-						// JarFile("C:\\Users\\smuniapp\\.m2\\repository\\com\\cisco\\dbds\\Utils\\0.0.1-Release\\Utils-0.0.1-Release.jar");
+						// JarFile("C:\\Users\\amsathishkumar\\.m2\\repository\\com\\cisco\\dbds\\Utils\\0.0.1-Release\\Utils-0.0.1-Release.jar");
 						jarfilehandler
 						.copyResourcesToDirectory(jarFile, "internetexplorer",
 								"src/it/resources/InternetExplorer");

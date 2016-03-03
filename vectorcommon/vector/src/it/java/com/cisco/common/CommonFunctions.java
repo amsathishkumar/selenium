@@ -1,16 +1,16 @@
 /**
- * Copyright (c) 2015 by Cisco Systems, Inc.
+ * Copyright (c) 2015 by sat, Inc.
  * All rights reserved.
  *
  * This software is the confidential and proprietary information
- * of Cisco Systems,  ("Confidential Information").  You
+ * of sat,  ("Confidential Information").  You
  * shall not disclose such Confidential Information and shall use
  * it only in accordance with the terms of the license agreement
- * you entered into with Cisco Systems.
+ * you entered into with sat.
  *
  *
  * @Project: LMS
- * @Author: smuniapp
+ * @Author: amsathishkumar
  * @Version:
  * @Description:
  * @Date created: Oct 8, 2015
@@ -44,11 +44,11 @@ import com.cisco.oss.foundation.directory.LookupManager;
 import com.cisco.oss.foundation.directory.ServiceDirectory;
 import com.cisco.oss.foundation.directory.entity.ServiceInstance;
 import com.cisco.oss.foundation.directory.impl.DirectoryServiceClient;
-import com.cisco.spvgt.utils.configfilehandler.ConfigFileHandlerManager;
-import com.cisco.spvgt.utils.logging.LogHandler;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.internal.LinkedTreeMap;
+import com.sat.spvgt.utils.configfilehandler.ConfigFileHandlerManager;
+import com.sat.spvgt.utils.logging.LogHandler;
 
 // TODO: Auto-generated Javadoc
 /**

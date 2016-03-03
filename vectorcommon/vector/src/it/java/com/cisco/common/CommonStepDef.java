@@ -1,16 +1,16 @@
 /**
- * Copyright (c) 2015 by Cisco Systems, Inc.
+ * Copyright (c) 2015 by sat, Inc.
  * All rights reserved.
  *
  * This software is the confidential and proprietary information
- * of Cisco Systems,  ("Confidential Information").  You
+ * of sat,  ("Confidential Information").  You
  * shall not disclose such Confidential Information and shall use
  * it only in accordance with the terms of the license agreement
- * you entered into with Cisco Systems.
+ * you entered into with sat.
  *
  *
  * @Project: LMS
- * @Author: smuniapp
+ * @Author: amsathishkumar
  * @Version:
  * @Description:
  * @Date created: Oct 8, 2015
@@ -41,9 +41,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 
-import com.cisco.spvgt.utils.configfilehandler.ConfigFileHandlerManager;
-import com.cisco.spvgt.utils.cucumber.Hooks;
-import com.cisco.spvgt.utils.validation.Validate;
 import com.cisco.spvtg.automationcore.datatype.CoreResponse;
 import com.cisco.spvtg.automationcore.http.HttpClient;
 import com.cisco.spvtg.automationcore.http.HttpClient.HttpClientBuilder;
@@ -56,6 +53,9 @@ import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.Consumer;
 import com.rabbitmq.client.DefaultConsumer;
 import com.rabbitmq.client.Envelope;
+import com.sat.spvgt.utils.configfilehandler.ConfigFileHandlerManager;
+import com.sat.spvgt.utils.cucumber.Hooks;
+import com.sat.spvgt.utils.validation.Validate;
 
 import cucumber.api.DataTable;
 import cucumber.api.Scenario;

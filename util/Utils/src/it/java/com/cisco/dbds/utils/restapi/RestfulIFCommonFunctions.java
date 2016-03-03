@@ -1,6 +1,6 @@
 /**
 ######################################################
- Copyright (c) 2011-2013 by Cisco Systems, Inc.
+ Copyright (c) 2011-2013 by sat, Inc.
 ######################################################
  */
 package com.cisco.dbds.utils.restapi;

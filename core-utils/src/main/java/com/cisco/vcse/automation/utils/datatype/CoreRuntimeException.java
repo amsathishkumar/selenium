@@ -1,18 +1,18 @@
 /**
- * Copyright (c) $2015 by Cisco Systems, Inc.
+ * Copyright (c) $2015 by sat, Inc.
  * All rights reserved.
  *
  * This software is the confidential and proprietary information
- * of Cisco Systems,  ("Confidential Information").  You
+ * of sat,  ("Confidential Information").  You
  * shall not disclose such Confidential Information and shall use
  * it only in accordance with the terms of the license agreement
- * you entered into with Cisco Systems.
+ * you entered into with sat.
  * 
  * Custom Runtime exception
  *
  *
  * @Project: core-HTTP
- * @Author: kosk
+ * @Author: amsathishkumar
  * @Version: 1.0.0.0
  * @Description:  Custom Runtime exception
  * @Date updated: 6/3/2015

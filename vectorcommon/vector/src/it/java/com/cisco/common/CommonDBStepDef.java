@@ -1,16 +1,16 @@
 /**
- * Copyright (c) 2015 by Cisco Systems, Inc.
+ * Copyright (c) 2015 by sat, Inc.
  * All rights reserved.
  *
  * This software is the confidential and proprietary information
- * of Cisco Systems,  ("Confidential Information").  You
+ * of sat,  ("Confidential Information").  You
  * shall not disclose such Confidential Information and shall use
  * it only in accordance with the terms of the license agreement
- * you entered into with Cisco Systems.
+ * you entered into with sat.
  *
  *
  * @Project: LMS
- * @Author: smuniapp
+ * @Author: amsathishkumar
  * @Version:
  * @Description:
  * @Date created: Oct 8, 2015
@@ -21,8 +21,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.cisco.spvgt.utils.validation.MiscExpception;
-import com.cisco.spvgt.utils.validation.Validate;
+import com.sat.spvgt.utils.validation.MiscExpception;
+import com.sat.spvgt.utils.validation.Validate;
 
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;

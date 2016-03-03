@@ -1,16 +1,16 @@
 /**
- * Copyright (c) 2015 by Cisco Systems, Inc.
+ * Copyright (c) 2015 by sat, Inc.
  * All rights reserved.
  *
  * This software is the confidential and proprietary information
- * of Cisco Systems,  ("Confidential Information").  You
+ * of sat,  ("Confidential Information").  You
  * shall not disclose such Confidential Information and shall use
  * it only in accordance with the terms of the license agreement
- * you entered into with Cisco Systems.
+ * you entered into with sat.
  *
  *
  * @Project: LMS
- * @Author: smuniapp
+ * @Author: amsathishkumar
  * @Version:
  * @Description:
  * @Date created: Oct 8, 2015
@@ -41,8 +41,8 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import com.cisco.spvgt.utils.configfilehandler.ConfigFileHandlerManager;
-import com.cisco.spvgt.utils.validation.Validate;
+import com.sat.spvgt.utils.configfilehandler.ConfigFileHandlerManager;
+import com.sat.spvgt.utils.validation.Validate;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -140,7 +140,7 @@ public class CustomReport {
 
 					String uniidstatus = "N";
 					int pf = -1;
-					System.out.println("satsize" + msg2.size());
+					System.out.println("satize" + msg2.size());
 					for (int j2 = 0; j2 < msg2.size(); j2++) {
 						// Version
 						JSONObject jo2 = (JSONObject) msg2.get(j2);

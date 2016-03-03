@@ -1,18 +1,18 @@
 /**
- * Copyright (c) $2015 by Cisco Systems, Inc.
+ * Copyright (c) $2015 by sat, Inc.
  * All rights reserved.
  *
  * This software is the confidential and proprietary information
- * of Cisco Systems,  ("Confidential Information").  You
+ * of sat,  ("Confidential Information").  You
  * shall not disclose such Confidential Information and shall use
  * it only in accordance with the terms of the license agreement
- * you entered into with Cisco Systems.
+ * you entered into with sat.
  * 
  * This class wraps shall response
  *
  *
  * @Project: acutomationCore-ShellClient
- * @Author: kosk
+ * @Author: amsathishkumar
  * @Version: 1.0.0.0
  * @Description:  This class wraps shell response, contains exit code for command run and standrd and error console outs
  * @Date updated: 6/10/2015
