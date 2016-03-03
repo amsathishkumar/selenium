@@ -15,7 +15,7 @@
  * @Description:
  * @Date created: Oct 8, 2015
  */
-package com.cisco.lms;
+package com.sat.lms;
 
 import org.junit.runner.RunWith;
 import cucumber.api.CucumberOptions;

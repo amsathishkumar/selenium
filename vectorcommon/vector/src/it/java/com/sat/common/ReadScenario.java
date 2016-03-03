@@ -1,4 +1,4 @@
-package com.cisco.common;
+package com.sat.common;
 
 import com.sat.spvgt.utils.cucumber.FeatureFileReadTestcase;
 

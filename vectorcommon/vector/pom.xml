@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.cisco.lms</groupId>
+  <groupId>com.sat.lms</groupId>
   <artifactId>vector</artifactId>
   <version>0.0.1-Release</version>
 	<build>
@@ -63,65 +63,65 @@
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>com.cisco.dbds</groupId>
+			<groupId>com.sat.dbds</groupId>
 			<artifactId>Utils</artifactId>
 			<version>2.0.0</version>
 		</dependency>
 
 
 		<dependency>
-			<groupId>com.cisco.dbds.dtacs</groupId>
+			<groupId>com.sat.dbds.dtacs</groupId>
 			<artifactId>DTACS5.0</artifactId>
 			<version>Release</version>
 		</dependency>
 
 		<dependency>
-			<groupId>com.cisco.dbds.vcs</groupId>
+			<groupId>com.sat.dbds.vcs</groupId>
 			<artifactId>PrimeWidgets</artifactId>
 			<version>2.0.0</version>
 		</dependency>		
 		<dependency>
-			<groupId>com.cisco.vcse.automation.utils</groupId>
+			<groupId>com.sat.vcse.automation.utils</groupId>
 			<artifactId>core-Misc</artifactId>
 			<version>1.0.0.2</version>
 		</dependency>		
 		<dependency>
-  			<groupId>com.cisco.vcse.automation.utils</groupId>
+  			<groupId>com.sat.vcse.automation.utils</groupId>
   			<artifactId>core-DB</artifactId>
   			<version>1.0.0.1</version>  			
 		</dependency>		
 		<dependency>
-  			<groupId>com.cisco.vcse.automation.utils</groupId>
+  			<groupId>com.sat.vcse.automation.utils</groupId>
   			<artifactId>core-Utils</artifactId>
   			<version>1.0.0.0</version>
 		</dependency>
 		<dependency>
-  			<groupId>com.cisco.vcse.automation.utils</groupId>
+  			<groupId>com.sat.vcse.automation.utils</groupId>
   			<artifactId>core-HTTP</artifactId>
   			<version>1.0.0.0</version>
 		</dependency>
 		<dependency>
-  			<groupId>com.cisco.vcse.automation.utils</groupId>
+  			<groupId>com.sat.vcse.automation.utils</groupId>
   			<artifactId>core-SSH</artifactId>
   			<version>1.0.0.0</version>
 		</dependency>		
 		<dependency>
-			<groupId>com.cisco.oss.foundation.directory</groupId>
+			<groupId>com.sat.oss.foundation.directory</groupId>
 			<artifactId>sd-api</artifactId>
 			<version>1.1.0-10</version>
 		</dependency>
 		<dependency>
-			<groupId>com.cisco.spvtg.automationcore</groupId>
+			<groupId>com.sat.spvtg.automationcore</groupId>
 			<artifactId>automationCore-HTTP</artifactId>
 			<version>1.0.0.0-Release</version>
 		</dependency>
 		<dependency>
-			<groupId>com.cisco.spvtg.automationcore</groupId>
+			<groupId>com.sat.spvtg.automationcore</groupId>
 			<artifactId>automationCore-ShellClient</artifactId>
 			<version>1.0.0.0-Release</version>
 		</dependency>
 		<dependency>
-			<groupId>com.cisco.dbds.ccap</groupId>
+			<groupId>com.sat.dbds.ccap</groupId>
 			<artifactId>ServicesManager</artifactId>
 			<version>0.0.1-Release</version>
 		</dependency>
@@ -180,7 +180,7 @@
 						<artifactId>exec-maven-plugin</artifactId>
 						<version>1.0.1</version>
 						<configuration>
-							<mainClass>com.cisco.common.CustomReport</mainClass>
+							<mainClass>com.sat.common.CustomReport</mainClass>
 						</configuration>
 					</plugin>
 

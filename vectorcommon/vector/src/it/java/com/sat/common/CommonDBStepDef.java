@@ -15,7 +15,7 @@
  * @Description:
  * @Date created: Oct 8, 2015
  */
-package com.cisco.common;
+package com.sat.common;
 
 import java.util.LinkedHashMap;
 import java.util.List;
