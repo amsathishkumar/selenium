@@ -33,10 +33,10 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 
-import com.cisco.vcse.automation.utils.Autowait;
-import com.cisco.vcse.automation.utils.CommonUtils;
-import com.cisco.vcse.automation.utils.datatype.CoreRuntimeException;
-import com.cisco.vcse.automation.utils.logging.LogHandler;
+import com.sat.vcse.automation.utils.Autowait;
+import com.sat.vcse.automation.utils.CommonUtils;
+import com.sat.vcse.automation.utils.datatype.CoreRuntimeException;
+import com.sat.vcse.automation.utils.logging.LogHandler;
 import com.sat.vcse.automation.utils.datatype.CommandResponse;
 import com.sat.vcse.automation.utils.datatype.Server;
 
