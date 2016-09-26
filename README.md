@@ -5,3 +5,5 @@
 * Mysql
 
 ##core-http
+* http
+*https
