@@ -6,4 +6,4 @@
 
 ##core-http
 * http
-*https
+* https
