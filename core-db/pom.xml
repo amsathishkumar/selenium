@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.sat.vcse.automation.utils</groupId>
 	<artifactId>core-DB</artifactId>
@@ -6,11 +7,41 @@
 	<version>1.0.0.1</version>
 	<name>core-DB</name>
 	<description>Core library for DB interation</description>
-
+	<properties>
+		<!-- github server corresponds to entry in ~/.m2/settings.xml -->
+		<github.global.server>github</github.global.server>
+	</properties>
+	<repositories>
+		<repository>
+			<id>mavenrepo</id>
+			<url>https://github.com/amsathishkumar/mavenrepo</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+		</repository>
+	</repositories>
 
 	<build>
 
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.3</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.3</version>
@@ -41,6 +72,47 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.8.1</version>
+				<configuration>
+					<altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.12</version>
+				<configuration>
+					<!-- git commit message -->
+					<message>Maven artifacts for ${project.version}</message>
+					<!-- disable webpage processing -->
+					<noJekyll>true</noJekyll>
+					<!-- matches distribution management repository url above -->
+					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
+					<!-- remote branch name -->
+					<branch>refs/heads/master</branch>
+					<!-- If you remove this then the old artifact will be removed and new 
+						one will replace. But with the merge tag you can just release by changing 
+						the version -->
+					<merge>true</merge>
+					<includes>
+						<include>**/*</include>
+					</includes>
+					<!-- github repo name -->
+					<repositoryName>mavenrepo</repositoryName>
+					<!-- github username -->
+					<repositoryOwner>amsathishkumar</repositoryOwner>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>deploy</phase>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 
@@ -48,21 +120,17 @@
 		<dependency>
 			<groupId>com.sat.vcse.automation.utils</groupId>
 			<artifactId>core-Utils</artifactId>
-			<version>1.0.0.0</version>
+			<version>1.0.0.1-SNAPSHOT</version>
 		</dependency>
-		
-		<!--<dependency>
-			<groupId>ojdbc</groupId>
-			<artifactId>ojdbc</artifactId>
-			<version>14</version>
-		</dependency>  
-		-->
+
+		<!--<dependency> <groupId>ojdbc</groupId> <artifactId>ojdbc</artifactId> 
+			<version>14</version> </dependency> -->
 		<dependency>
-    		<groupId>com.oracle</groupId>
-    		<artifactId>ojdbc6</artifactId>
-    		<version>11.2.0.3</version>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.2.0.3</version>
 		</dependency>
-				
+
 		<dependency>
 			<groupId>postgresql</groupId>
 			<artifactId>postgresql</artifactId>
@@ -86,20 +154,16 @@
 		</dependency>
 	</dependencies>
 
+	<!-- <distributionManagement> <snapshotRepository> <id>10.78.216.186</id> 
+		<name>SIT-local</name> <url>http://10.78.216.186:8081/artifactory/SIT-local</url> 
+		</snapshotRepository> <repository> <id>10.78.216.186</id> <name>Automation</name> 
+		<url>http://10.78.216.186:8081/artifactory/Automation</url> </repository> 
+		</distributionManagement> -->
 	<distributionManagement>
-
-		<snapshotRepository>
-			<id>10.78.216.186</id>
-			<name>SIT-local</name>
-			<url>http://10.78.216.186:8081/artifactory/SIT-local</url>
-		</snapshotRepository>
 		<repository>
-			<id>10.78.216.186</id>
-			<name>Automation</name>
-			<url>http://10.78.216.186:8081/artifactory/Automation</url>
+			<id>internal.repo</id>
+			<name>Temporary Staging Repository</name>
+			<url>file://${project.build.directory}/mvn-repo</url>
 		</repository>
-
-
-
 	</distributionManagement>
 </project>

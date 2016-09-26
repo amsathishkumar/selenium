@@ -128,7 +128,7 @@
 		<dependency>
 			<groupId>com.cisco.vcse.automation.utils</groupId>
 			<artifactId>core-Utils</artifactId>
-			<version>1.0.0.1-SNAPSHOT</version>
+			<version>1.0.0.1</version>
 		</dependency>
 
 	</dependencies>

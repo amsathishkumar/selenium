@@ -4,12 +4,13 @@
 	<groupId>com.sat.vcse.automation.utils</groupId>
 	<artifactId>core-Utils</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.0.1-SNAPSHOT</version>
+	<version>1.0.0.2</version>
 	<name>core-Utils</name>
 	<description>core-Utils</description>
 	<properties>
 		<!-- github server corresponds to entry in ~/.m2/settings.xml -->
 		<github.global.server>github</github.global.server>
+	     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<!-- <scm> <connection>scm:git:git@lwr-dbds-gitlab1.cisco.com:dbdsautomation/core-utils.git</connection> 
 		<developerConnection>scm:git:git@lwr-dbds-gitlab1.cisco.com:dbdsautomation/core-utils.git</developerConnection> 
@@ -67,39 +68,39 @@
 				</configuration>
 			</plugin>
 			<plugin>
-         <groupId>com.github.github</groupId>
-         <artifactId>site-maven-plugin</artifactId>
-         <version>0.12</version>
-         <configuration>
-              <!-- git commit message -->
-              <message>Maven artifacts for ${project.version}</message>
-              <!-- disable webpage processing -->
-              <noJekyll>true</noJekyll>
-              <!-- matches distribution management repository url above -->
-              <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
-              <!-- remote branch name -->
-              <branch>refs/heads/master</branch>
-              <!-- If you remove this then the old artifact will be removed and new 
-               one will replace. But with the merge tag you can just release by changing 
-                                                the version -->
-              <merge>true</merge>
-              <includes>
-                <include>**/*</include>
-                </includes>
-                <!-- github repo name -->
-                <repositoryName>mavenrepo</repositoryName>
-                <!-- github username -->
-                <repositoryOwner>amsathishkumar</repositoryOwner>
-          </configuration>
-          <executions>
-              <execution>
-                    <goals>
-                         <goal>site</goal>
-                    </goals>
-                    <phase>deploy</phase>
-              </execution>
-          </executions>
-</plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.12</version>
+				<configuration>
+					<!-- git commit message -->
+					<message>Maven artifacts for ${project.version}</message>
+					<!-- disable webpage processing -->
+					<noJekyll>true</noJekyll>
+					<!-- matches distribution management repository url above -->
+					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
+					<!-- remote branch name -->
+					<branch>refs/heads/master</branch>
+					<!-- If you remove this then the old artifact will be removed and new 
+						one will replace. But with the merge tag you can just release by changing 
+						the version -->
+					<merge>true</merge>
+					<includes>
+						<include>**/*</include>
+					</includes>
+					<!-- github repo name -->
+					<repositoryName>mavenrepo</repositoryName>
+					<!-- github username -->
+					<repositoryOwner>amsathishkumar</repositoryOwner>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>deploy</phase>
+					</execution>
+				</executions>
+			</plugin>
 
 		</plugins>
 	</build>
@@ -114,6 +115,16 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>3.4</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.6-rc1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1</version>
 		</dependency>
 	</dependencies>
 
